@@ -1,0 +1,9 @@
+<div class="meta-data-container">
+  <div class="meta-data-title">Meta Data</div>
+  <div id="meta-data-details">
+    <div class="meta-data-item" *ngFor="let item of metaDataItem | keyvalue">
+        <span>{{item.key}}</span>
+        <span>: {{item.value}}</span>
+    </div>
+  </div>
+</div>

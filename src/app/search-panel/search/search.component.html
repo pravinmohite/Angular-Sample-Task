@@ -1,0 +1,7 @@
+<div class="search-container">
+    <input type="text" placeholder="search" id="searchInput" [(ngModel)]="searchString" (keyup)="searchByUsernameEmail()"/>
+    <select class="sort-by-selectbox" [(ngModel)]="selectedValue" (click)="sortBy()">  
+      <option value="username">Username</option>
+      <option value="email">Email</option> 
+    </select>
+  </div>

@@ -1,0 +1,17 @@
+<div id="mobile-view-container">
+    <div class="mobile-view-item" *ngFor="let item of list">
+        <div class="item">
+            <span>Username: </span>
+            <span>{{item.username}}</span>
+        </div>
+        <div class="item">
+            <span>Email: </span>
+            <span>{{item.email}}</span>
+        </div>
+        <div class="item">
+            <span>City: </span>
+            <span>{{item.address.city}}</span>
+        </div>
+        <button class="show-details-btn" (click)="showDetails(item)">Show Details</button>
+    </div>
+</div>

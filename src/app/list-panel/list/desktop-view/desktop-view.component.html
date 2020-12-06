@@ -1,0 +1,18 @@
+<table class="table-container" id="desktop-view-container">
+    <thead class="table-header">
+        <tr>
+            <th (click)="sortBy('username')">Username</th>
+            <th (click)="sortBy('email')">Email</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        <tr *ngFor="let item of list">
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.address.city}}</td>
+            <td><button class="show-details-btn" (click)="showDetails(item)">Show Details</button></td>
+        </tr>
+    </tbody>
+</table>
