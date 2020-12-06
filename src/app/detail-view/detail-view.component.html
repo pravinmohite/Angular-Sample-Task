@@ -1,0 +1,12 @@
+<div class="meta-data-container">
+    <div class="meta-data-title">Details Page</div>
+    <div id="meta-data-details">
+      <div class="meta-data-item" *ngFor="let item of currentItem | keyvalue">
+          <span>{{item.key}}</span>
+          <span>: {{item.value}}</span>
+      </div>
+    </div>
+    <div class="action-btns">
+      <button class="btn-primary" (click)="goBack()">Back</button>
+    </div> 
+  </div>
