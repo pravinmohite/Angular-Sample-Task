@@ -129,7 +129,11 @@
  }
  .sample-app .main-container .action-btns .btn-primary {
     width:100%;
-
+    padding: 8px;
+    background: whitesmoke;
+    border: solid 1px #cecccc;
+    box-shadow: 0px 1px 6px gainsboro;
+    cursor: pointer;
  }
  .sample-app .main-container .show-details-btn {
     padding: 8px;
