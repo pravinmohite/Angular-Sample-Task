@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { DetailViewComponent } from './detail-view/detail-view.component';
+import {AgGridModule} from 'ag-grid-angular'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
