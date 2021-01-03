@@ -10,6 +10,10 @@ export class ApiService {
   endPoint="https://jsonplaceholder.typicode.com/users";
   private data=new BehaviorSubject(null);
   currentData=this.data.asObservable();
+  loggedInStatus=localStorage.getItem('loggedIn')?true:false;
+  private loginStatus=new BehaviorSubject(this.loggedInStatus);
+  currentLoginStatus=this.loginStatus.asObservable();
+
   constructor(private http:HttpClient) {
      this.getDetails();
    }
@@ -59,5 +63,15 @@ export class ApiService {
       }
   }
   return result;
+ }
+
+ changeLoggedInStatus(param) {
+   if(param) {
+    localStorage.setItem('loggedIn',"true");
+   }
+   else {
+    localStorage.removeItem('loggedIn');
+   }
+   this.loginStatus.next(param);
  }
 }

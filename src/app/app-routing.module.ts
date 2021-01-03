@@ -4,6 +4,7 @@ import { RouterModule , Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ListComponent } from './list-panel/list/list.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
+import {AuthguardService} from './services/authGuard/authguard.service';
 
 let routes: Routes = [
 {
@@ -12,11 +13,13 @@ let routes: Routes = [
   },
   {
       path:'list',
-      component:ListComponent
+      component:ListComponent,
+      canActivate:[AuthguardService]
   },
   {
       path:'showDetails',
-      component:DetailViewComponent
+      component:DetailViewComponent,
+      canActivate:[AuthguardService]
   }
 ]
 @NgModule({

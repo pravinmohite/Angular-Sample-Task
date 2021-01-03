@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ApiService} from './../../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn=localStorage.getItem('loggedIn')?true:false;
+  constructor(private router:Router,private apiService:ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.currentLoginStatus.subscribe(data=>{
+      this.isLoggedIn=data;
+    })
   }
-
+  
+  logout() {
+    this.apiService.changeLoggedInStatus(false);
+    this.router.navigateByUrl('/');
+  }
 }

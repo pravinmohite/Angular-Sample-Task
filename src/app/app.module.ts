@@ -10,7 +10,7 @@ import { MobileViewComponent } from './list-panel/list/mobile-view/mobile-view.c
 import { DesktopViewComponent } from './list-panel/list/desktop-view/desktop-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 
 @NgModule({
@@ -29,6 +29,7 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

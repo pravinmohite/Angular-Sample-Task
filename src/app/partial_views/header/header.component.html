@@ -2,5 +2,6 @@
     <div class="title-container">
         <img class="logo" src="./../../../assets/images/sample-logo-design.png"/>
         <span class="title">Sample Project</span>
+        <button *ngIf="isLoggedIn" class="btn btn-primary pull-right" (click)="logout()">Logout</button>
     </div> 
  </header>   
